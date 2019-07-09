@@ -158,3 +158,17 @@ mappedMoves.forEach((steps, i) => {
   console.log(`Movement #${i+1}: ${steps} steps`);
 });
 
+// reduce
+
+let input = 'noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest';
+const inputArray = input.split(' ');
+// console.log(inputArray);
+const decode = (acc, cur) => {
+  if (cur.length === 3) {
+    acc += ' ';
+  } else {
+    acc += cur[cur.length - 1].toUpperCase();
+  }
+  return acc;
+};
+console.log(inputArray.reduce(decode, ''));

@@ -133,3 +133,10 @@ zombieWarning('Another St.');
 tornadoWarning('Windy Way');
 cicadaWarning('Bug Boulevard');
 
+// turtle movements
+
+let turtleMoves = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
+
+let filteredMoves = turtleMoves.filter(steps => steps.every(step => step >= 0));
+
+console.log(JSON.stringify(filteredMoves));

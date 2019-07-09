@@ -60,3 +60,21 @@ function average(numbers) {
 }
 
 console.log(average(arr2));
+
+// HIGHER ORDER FUNCTIONS
+function hello() {
+  console.log('Hello world');
+}
+
+function goodbye() {
+  console.log('Goodbye world');
+}
+
+function repeat(fn, n) {
+  for (let i = 0; i < n; i++) {
+    fn();
+  }
+}
+
+console.log(repeat(hello, 5));
+console.log(repeat(goodbye, 5));

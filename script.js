@@ -140,3 +140,21 @@ let turtleMoves = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
 let filteredMoves = turtleMoves.filter(steps => steps.every(step => step >= 0));
 
 console.log(JSON.stringify(filteredMoves));
+
+
+
+let mappedMoves = filteredMoves.map((step) => {
+  let counter = 0;
+  for (let i = 0; i < step.length; i++) {
+    counter += step[i];
+  }
+  return counter;
+});
+
+console.log(mappedMoves);
+
+//step number will be index we're on plus 1
+mappedMoves.forEach((steps, i) => {
+  console.log(`Movement #${i+1}: ${steps} steps`);
+});
+
